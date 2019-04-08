@@ -83,16 +83,18 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
-.w3-container {
-  padding:0.01em 16px
+.container {
+  padding:0.01em 16px;
+  margin: auto;
+}
+
+.card {
+  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
   float: left;
-  width: : 45%;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
-.w3-card-4 {
-  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
-}
-
-.w3-center {
+.center {
   text-align:center!important
 }

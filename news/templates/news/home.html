@@ -1,15 +1,19 @@
 {% extends "news/base.html" %}
 {% block content %}
-    <h1>Test Page!</h1>
+    <span>Sources: </span>
     {% for source in sources %}
-    <p>{{ source }}</p>
+    <span>{{ source }}</span>
     {% endfor %}
     {% for news in newss %}
-    <div class="w3-container">
-      <div class="w3-card-4" style="width:50%">
-        <img src="{{ news.imageLink }}" alt="NewsImage" style="width:100%">
-        <div class="w3-container w3-center">
-          <p>{{ news.title }}</p>
+    <div class="container">
+      <div class="card" style="width:40%">
+        <a href="{{ news.contentLink }}"><img src="{{ news.imageLink }}" alt="NewsImage" style="width:100%"></a>
+        <div class="container center">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ news.source }}</a>
+            <small class="text-muted">{{ news.timeAgo }}</small>
+          </div>
+          <h2><a class="article-title" href="{{ news.contentLink }}">{{ news.title }}</a></h2>
         </div>
       </div>
     </div>
