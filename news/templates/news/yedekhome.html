@@ -5,14 +5,17 @@
     <p>{{ source }}</p>
     {% endfor %}
     {% for news in newss %}
-    <div class="w3-container">
-      <div class="w3-card-4" style="width:50%">
-        <img src="{{ news.imageLink }}" alt="NewsImage" style="width:100%">
-        <div class="w3-container w3-center">
-          <p>{{ news.title }}</p>
+      <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ news.imageLink }}">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ news.source }}</a>
+            <small class="text-muted">{{ news.timeAgo }}</small>
+          </div>
+          <h2><a class="article-title" href="{{ news.contentLink }}">{{ news.title }}</a></h2>
+          <p class="article-content">{{ news.content }}</p>
         </div>
-      </div>
-    </div>
+      </article>
     {% endfor %}
     {% if is_paginated %}
       {% if page_obj.has_previous %}
